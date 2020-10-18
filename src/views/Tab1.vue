@@ -21,6 +21,10 @@
         <br>
         <br>
         But if you change this state programmicaly by this.checked = !this.checked, ionChange will trigger as well. But it should not. Or should it?</p>
+
+        <h2>Desired behaviour</h2>
+        <input type="checkbox" :checked="checkedNative" @change="onChangeNative">
+        <p>checked native: {{ checkedNative ? 'yes' : 'no' }}</p>
     </ion-content>
   </ion-page>
 </template>
@@ -35,6 +39,7 @@ export default  {
   data(){
     return {
       checked : true,
+      checkedNative : true,
       immidiatelyChecked : true,
     }
   },
@@ -50,6 +55,18 @@ export default  {
       //We want turn off checkbox automatically after 1 second
       this.timeout = setTimeout(() => {
         this.checked = !e.target.checked;
+      }, 1000);
+    },
+    onChangeNative(e){
+      if ( this.timeoutNative ){
+        clearTimeout(this.timeoutNative);
+      }
+
+      this.checkedNative = e.target.checked;
+
+      //We want turn off checkbox automatically after 1 second
+      this.timeoutNative = setTimeout(() => {
+        this.checkedNative = !e.target.checked;
       }, 1000);
     },
   }
