@@ -5,7 +5,11 @@ import Tabs from '../views/Tabs.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/tabs/tab1'
+    redirect: '/tabs/dashboard'
+  },
+  {
+    path: '/login',
+    component: () => import('@/views/Tab2.vue')
   },
   {
     path: '/tabs/',
@@ -13,18 +17,14 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: '',
-        redirect: 'tab1'
+        redirect: 'dashboard'
       },
       {
-        path: 'tab1',
+        path: 'dashboard',
         component: () => import('@/views/Tab1.vue')
       },
       {
-        path: 'tab2',
-        component: () => import('@/views/Tab2.vue')
-      },
-      {
-        path: 'tab3',
+        path: 'settings',
         component: () => import('@/views/Tab3.vue')
       }
     ]
