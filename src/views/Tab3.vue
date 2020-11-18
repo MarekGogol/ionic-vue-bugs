@@ -12,7 +12,7 @@
         </ion-toolbar>
       </ion-header>
 
-      <ion-button @click="loginTab">Go to login tab</ion-button>
+      <ion-button @click="loginTab">Go to login page</ion-button>
 
       <ExploreContainer name="Settings page" />
     </ion-content>
