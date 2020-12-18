@@ -2,12 +2,12 @@
   <ion-page>
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="dashboard">
+        <ion-tab-button tab="dashboard" href="/tabs/dashboard">
           <ion-icon :icon="triangle" />
           <ion-label>Dashboard</ion-label>
         </ion-tab-button>
 
-        <ion-tab-button tab="settings">
+        <ion-tab-button tab="settings" href="/tabs/settings">
           <ion-icon :icon="square" />
           <ion-label>Settings</ion-label>
         </ion-tab-button>
