@@ -12,7 +12,7 @@
         </ion-toolbar>
       </ion-header>
 
-      <ion-button @click="loginTab">Go to login page</ion-button>
+      <ion-button @click="loginDashboard">Go to dashboard</ion-button>
 
       <ExploreContainer name="Settings page" />
     </ion-content>
@@ -28,8 +28,8 @@ export default  {
   components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage },
 
   methods: {
-    loginTab(){
-      this.$router.push('/login');
+    loginDashboard(){
+      this.$router.push('/tabs/dashboard');
     },
   }
 }

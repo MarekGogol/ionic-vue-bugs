@@ -7,9 +7,9 @@
           <ion-label>Dashboard</ion-label>
         </ion-tab-button>
 
-        <ion-tab-button tab="settings" href="/tabs/settings">
+        <ion-tab-button tab="Tab2" href="/tabs/tab2">
           <ion-icon :icon="square" />
-          <ion-label>Settings</ion-label>
+          <ion-label>Tab2</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
